@@ -7,7 +7,12 @@ class Doctor extends Traveler {
 
   // methods
   heal(traveler) {
-    if (!traveler.isHealthy) traveler.isHealthy = true;
+    if (!traveler.isHealthy) {
+      traveler.isHealthy = true;
+      return `${this.name} diz: ${traveler} agora está saudável.`;
+    } else {
+      return `${this.name} diz: ${traveler} não está doente.`;
+    }
   }
 }
 

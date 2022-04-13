@@ -11,10 +11,12 @@ class Traveler {
   // methods
   hunt() {
     this.food += 2;
+    return `${this.name} diz: Agora eu tenho ${this.food} de comida.`;
   }
 
   eat() {
     this.food > 0 ? this.food-- : (this.isHealthy = false);
+    if (this.food === 0) return `${this.name} diz: Minha comida acabou.`;
   }
 }
 

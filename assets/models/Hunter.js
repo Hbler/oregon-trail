@@ -8,8 +8,8 @@ class Hunter extends Traveler {
 
   // methods
   hunt() {
-    super.hunt();
-    this.food += 3;
+    this.food += 5;
+    return `${this.name} diz: Agora eu tenho ${this.food} de comida.`;
   }
 
   eat() {
@@ -18,6 +18,8 @@ class Hunter extends Traveler {
       this.food = 0;
       this.isHealthy = false;
     } else this.isHealthy = false;
+
+    if (this.food === 0) return `${this.name} diz: Minha comida acabou.`;
   }
 
   giveFood(traveler, amount) {

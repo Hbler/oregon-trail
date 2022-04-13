@@ -12,9 +12,20 @@ class Wagon {
   }
 
   join = (traveler) => {
-    this.passengers.length < this.capacity
-      ? this.passengers.push(traveler)
-      : console.log("Sem espaço");
+    if (this.passengers.length < this.capacity) {
+      this.passengers.push(traveler);
+      return `${traveler.name} entrou n'A Caravana.`;
+    } else {
+      console.log(
+        `${traveler.name} diz:${this.passengers.map(
+          (obj) => " " + obj.name
+        )} estão n'A Caravana, acabaram os assentos.`
+      );
+      return `
+      ${traveler.name} diz:${this.passengers.map(
+        (obj) => obj.name
+      )} estão n'A Caravana, acabaram os assentos.`;
+    }
   };
 
   shouldQuarantine() {
