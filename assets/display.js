@@ -14,9 +14,8 @@ function prepareLayout() {
   info.innerText = "Tests on the console.";
 
   Header.append(title, subT, info);
-  //   Main.append();
   body.append(Header, Main);
 }
 
 //// Export
-export { prepareLayout };
+export { prepareLayout, Main };
