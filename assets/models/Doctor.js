@@ -3,6 +3,7 @@ import { Traveler } from "./Traveler.js";
 class Doctor extends Traveler {
   constructor(name) {
     super(name);
+    this.type = "doctor";
   }
 
   // methods

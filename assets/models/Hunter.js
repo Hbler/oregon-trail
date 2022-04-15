@@ -4,6 +4,7 @@ class Hunter extends Traveler {
   constructor(name) {
     super(name);
     this.food = 2;
+    this.type = "hunter";
   }
 
   // methods

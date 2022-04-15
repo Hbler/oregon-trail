@@ -1,5 +1,8 @@
 //// Imports
-import { createWagonSection } from "./assets/interaction.js";
+import {
+  createWagonSection,
+  createPassengersSection,
+} from "./assets/interaction.js";
 import { prepareLayout } from "./assets/display.js";
 import { Wagon } from "./assets/models/Wagon.js";
 import { Traveler } from "./assets/models/Traveler.js";
@@ -9,6 +12,7 @@ import { Doctor } from "./assets/models/Doctor.js";
 //// Flow
 prepareLayout();
 createWagonSection();
+createPassengersSection();
 
 //// Tests
 // Cria uma carroça que comporta 4 pessoas
