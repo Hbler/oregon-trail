@@ -10,7 +10,7 @@ class Hunter extends Traveler {
   // methods
   hunt() {
     this.food += 5;
-    return `${this.name} diz: Agora eu tenho ${this.food} de comida.`;
+    return `Agora eu tenho ${this.food} de comida.`;
   }
 
   eat() {
@@ -20,13 +20,19 @@ class Hunter extends Traveler {
       this.isHealthy = false;
     } else this.isHealthy = false;
 
-    if (this.food === 0) return `${this.name} diz: Minha comida acabou.`;
+    if (this.food === 0 && this.isHealthy === false)
+      return `Minha comida acabou, e estou doente.`;
+    else if (this.food === 0) return `Minha comida acabou.`;
+    else return `Agora tenho ${this.food} de comida.`;
   }
 
   giveFood(traveler, amount) {
     if (this.food > amount) {
       this.food -= amount;
       traveler.food += amount;
+      return `${traveler.name} agora tem ${traveler.food} de comida.\nE eu tenho ${this.food}`;
+    } else {
+      return `Não tenho comida suficiente para doar.`;
     }
   }
 }

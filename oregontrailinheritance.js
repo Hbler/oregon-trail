@@ -1,9 +1,10 @@
 //// Imports
+// import {} from "./assets/interaction.js";
 import {
+  prepareLayout,
   createWagonSection,
   createPassengersSection,
-} from "./assets/interaction.js";
-import { prepareLayout } from "./assets/display.js";
+} from "./assets/display.js";
 import { Wagon } from "./assets/models/Wagon.js";
 import { Traveler } from "./assets/models/Traveler.js";
 import { Hunter } from "./assets/models/Hunter.js";

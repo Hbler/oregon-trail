@@ -1,5 +1,6 @@
 //// Imports
-import { pickImg, createInputs, conditionStr } from "../interaction.js";
+import { createInputs, pickImg } from "../display.js";
+import { conditionStr } from "../interaction.js";
 class Traveler {
   name;
   food;
@@ -14,12 +15,16 @@ class Traveler {
   // methods
   hunt() {
     this.food += 2;
-    return `${this.name} diz: Agora eu tenho ${this.food} de comida.`;
+    return `Agora tenho ${this.food} de comida.`;
   }
 
   eat() {
     this.food > 0 ? this.food-- : (this.isHealthy = false);
-    if (this.food === 0) return `${this.name} diz: Minha comida acabou.`;
+
+    if (this.food === 0 && this.isHealthy === false)
+      return `Minha comida acabou, e estou doente.`;
+    else if (this.food === 0) return `Minha comida acabou.`;
+    else return `Agora tenho ${this.food} de comida.`;
   }
 
   showMe(parent) {

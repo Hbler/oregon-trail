@@ -17,7 +17,7 @@ class Wagon {
       return `${traveler.name} entrou n'A Caravana.`;
     } else {
       console.log(
-        `${traveler.name} diz:${this.passengers.map(
+        `${this.passengers.map(
           (obj) => " " + obj.name
         )} estão n'A Caravana, acabaram os assentos.`
       );
